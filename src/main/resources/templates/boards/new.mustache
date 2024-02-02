@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 작성</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form > div {
+            margin-bottom: 20px;
+        }
+        input[type="text"], textarea, input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+{{>layouts/header}}
+
+<div class="container">
+    <form action="/boards/create" method="post">
+        <div>
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div>
+            <label for="content">내용</label>
+            <textarea id="content" name="content" rows="4" required></textarea>
+        </div>
+        <div>
+            <label for="pdt">공개 날짜 및 시간</label>
+            <input type="datetime-local" id="pdt" name="pdt" step="1" required>
+        </div>
+        <button type="submit">등록</button>
+    </form>
+</div>
+
+{{>layouts/footer}}
+
+</body>
+</html>
