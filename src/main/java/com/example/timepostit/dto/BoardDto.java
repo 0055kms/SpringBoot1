@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BoardDto {
+    private Long id;
     private String title;
     private String content;
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
@@ -19,6 +20,6 @@ public class BoardDto {
 
 
     public Board toEntity() {
-        return new Board(null,title,content,pdt);
+        return new Board(id,title,content,pdt);
     }
 }
