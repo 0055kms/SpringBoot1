@@ -48,6 +48,17 @@
         .col-pdt {
             width: 20%;
         }
+        .write-btn {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
         @media screen and (max-width: 767px) {
             body {
                 padding: 10px;
@@ -65,6 +76,10 @@
             .col-content {
                 width: 100%; /* 내용 열만 전체 너비로 설정 */
             }
+            .write-btn {
+                width: auto;
+                padding: 5px 10px;
+            }
         }
     </style>
 </head>
@@ -73,6 +88,7 @@
 {{>layouts/header}}
 
 <div class="container">
+    <a href="/boards/new" class="write-btn">글쓰기</a>
     <h2>게시글 목록</h2>
     <table>
         <thead>

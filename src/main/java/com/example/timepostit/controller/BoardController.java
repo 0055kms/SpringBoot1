@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +41,8 @@ public class BoardController {
     }
     @GetMapping("/boards")
     public String showIndex(Model model){
-        List<Board> boardList = boardRepository.findAll();
+        List<Board> boardList = boardRepository.findAllWithPdtAfter(LocalDateTime.now());
+        log.info("now의 시간: " + LocalDateTime.now());
         log.info(boardList.toString());
         model.addAttribute("boardList",boardList);
         return "/boards/index";
