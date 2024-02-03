@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 목록</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* 가로 스크롤바 추가 */
+        }
+        table {
+            min-width: 600px; /* 테이블 최소 너비 설정 */
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            word-wrap: break-word; /* 긴 단어 줄바꿈 */
+            text-overflow: ellipsis; /* 넘친 내용 말줄임표로 표시 */
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .col-id {
+            width: 10%;
+        }
+        .col-title {
+            width: 20%;
+        }
+        .col-content {
+            width: 50%;
+        }
+        .col-pdt {
+            width: 20%;
+        }
+        @media screen and (max-width: 767px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+            th, td {
+                padding: 5px;
+                font-size: 12px; /* 글자 크기 조정 */
+            }
+            .col-id, .col-title, .col-pdt {
+                display: none; /* 화면이 작을 때는 일부 열 숨김 */
+            }
+            .col-content {
+                width: 100%; /* 내용 열만 전체 너비로 설정 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+{{>layouts/header}}
+
+<div class="container">
+    <h2>게시글 목록</h2>
+    <table>
+        <thead>
+        <tr>
+            <th class="col-id">번호</th>
+            <th class="col-title">제목</th>
+            <th class="col-content">내용</th>
+            <th class="col-pdt">공개 시간</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#boardList}}
+            <tr>
+                <td class="col-id">{{id}}</td>
+                <td class="col-title">{{title}}</td>
+                <td class="col-content">{{content}}</td>
+                <td class="col-pdt">{{pdt}}</td>
+            </tr>
+        {{/boardList}}
+        </tbody>
+    </table>
+</div>
+
+{{>layouts/footer}}
+
+</body>
+</html>

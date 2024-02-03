@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 상세 정보</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f8f8;
+            text-align: left;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+{{>layouts/header}}
+
+<div class="container">
+    <h1>게시글 상세 보기</h1>
+    <table>
+        <tr>
+            <th>번호</th>
+            <td>{{board.id}}</td>
+        </tr>
+        <tr>
+            <th>제목</th>
+            <td>{{board.title}}</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>{{board.content}}</td>
+        </tr>
+        <tr>
+            <th>공개 시간</th>
+            <td>{{board.pdt}}</td>
+        </tr>
+    </table>
+</div>
+
+{{>layouts/footer}}
+
+</body>
+</html>
