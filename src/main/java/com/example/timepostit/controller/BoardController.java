@@ -2,7 +2,6 @@ package com.example.timepostit.controller;
 
 import com.example.timepostit.dto.BoardDto;
 import com.example.timepostit.entity.Board;
-import com.example.timepostit.repository.BoardRepository;
 import com.example.timepostit.service.BoardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
