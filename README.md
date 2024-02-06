@@ -15,6 +15,7 @@
 - Apache Tomcat
 - IntelliJ IDEA
 - Spring Boot
+- Spring Data JPA
 - Bootstrap
 - ChatGPT4
 
