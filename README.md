@@ -16,7 +16,7 @@
 - IntelliJ IDEA
 - Spring Boot
 - Bootstrap
-- Chatgpt4
+- ChatGPT4
 
 ## 4. 주요 코드 설명
 
