@@ -21,6 +21,7 @@
 
 ## 4. 주요 코드 설명
 
+## 4. 주요 코드 설명
 
 ### DTO 클래스
 
@@ -54,3 +55,20 @@
 
 
 ## 5. 실행 화면
+
+### 현재 시간에 공개되는 글
+
+![image](https://github.com/0055kms/TimePostit/assets/157768680/e0f2a559-6a03-4e45-8fb9-be2ec7b0806a)
+![image](https://github.com/0055kms/TimePostit/assets/157768680/d334d0a3-8f12-4fb2-af8a-95c22fbdf2f8)
+![image](https://github.com/0055kms/TimePostit/assets/157768680/7d1e9cf7-3297-40a9-b58e-a0715503be5a)
+![image](https://github.com/0055kms/TimePostit/assets/157768680/68b75b98-0e44-419e-a6bf-a66454261737)
+
+게시글 작성을 완료하거나 목록에서 제목을 누르면 게시글 상세 페이지로 이동되며 수정과 삭제가 가능합니다.
+
+### 내일 공개되는 글 (오늘은 목록에서 보이지 않습니다)
+
+![image](https://github.com/0055kms/TimePostit/assets/157768680/ee907fd4-cf06-459d-8e41-18b5b1faefd0)
+![image](https://github.com/0055kms/TimePostit/assets/157768680/91b542d4-a0a1-4d59-af67-9796c15a45ea)
+![image](https://github.com/0055kms/TimePostit/assets/157768680/86893a0d-8f5b-4b17-9a8f-e220e79db534)
+
+
