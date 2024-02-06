@@ -23,7 +23,7 @@
 
 ## 4. 주요 코드 설명
 
-### Lombok 어노테이션
+### DTO 클래스
 
 - `@Getter`: 필드에 대한 getId, getTitle 등의 읽기 메소드를 자동 생성.
 - `@Setter`: 필드 값을 변경하는 setId, setTitle 등의 쓰기 메소드를 자동 생성.
