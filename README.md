@@ -22,6 +22,7 @@
 ## 4. 주요 코드 설명
 
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/84a742f2-00ef-4c6e-8939-09ee56573a6b)
+
 @Getter: 필드에 대한 getId, getTitle 등의 읽기 메소드를 자동 생성.
 @Setter: 필드 값을 변경하는 setId, setTitle 등의 쓰기 메소드를 자동 생성.
 @ToString: 객체를 문자열로 표현하는 toString() 메소드를 자동 생성.
@@ -31,15 +32,18 @@
 toEntity(): Dto를 엔티티로 변환
 
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/3bf1ec30-fb6d-4166-ac0a-3430ac96ef21)
+
 @Table(name = "board"): 엔티티가 매핑될 DB 테이블 지정
 @GeneratedValue(strategy = GenerationType.IDENTITY): 기본키(id) 를 자동 증가 기능으로 생성함
 
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/38b96b9f-994a-4a84-8407-a8b8b4c9afce)
+
 JpaRepository를 확장해 CRUD작업 매소드를 자동으로 사용 가능하게 함
 @Query("SELECT b FROM Board b WHERE b.pdt <= ?1"): findAllWithPdtAfter(LocalDateTime now) 메서드를 통해
 주어진 now 시간보다 이전에 생성된 모든 Board 엔티티를 조회하는 쿼리를 정의
 
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/abd98883-c9c4-45e3-8d2b-9e6d6bb1e720)
+
 BoardService: 게시판 관련 데이터 관리
 BoardController: 웹 요청 처리, 서비스에 요청 전달, 로깅을 사용해 일부 작업 내용 기록
 
