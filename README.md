@@ -60,10 +60,12 @@
 
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/e0f2a559-6a03-4e45-8fb9-be2ec7b0806a)
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/d334d0a3-8f12-4fb2-af8a-95c22fbdf2f8)
-![image](https://github.com/0055kms/TimePostit/assets/157768680/7d1e9cf7-3297-40a9-b58e-a0715503be5a)
+![image](https://github.com/0055kms/TimePostit/assets/157768680/290c5b0c-8f73-45a4-91f8-51c3b889ebd3)
 ![image](https://github.com/0055kms/TimePostit/assets/157768680/68b75b98-0e44-419e-a6bf-a66454261737)
 
 게시글 작성을 완료하거나 목록에서 제목을 누르면 게시글 상세 페이지로 이동되며 수정과 삭제가 가능합니다.
+
+
 
 ### 내일 공개되는 글 (오늘은 목록에서 보이지 않습니다)
 
