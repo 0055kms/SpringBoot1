@@ -2,7 +2,9 @@ package com.example.timepostit.controller;
 
 import com.example.timepostit.dto.BoardDto;
 import com.example.timepostit.entity.Board;
+import com.example.timepostit.entity.Comment;
 import com.example.timepostit.service.BoardService;
+import com.example.timepostit.service.CommentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,8 @@ import java.util.List;
 public class BoardController {
     @Autowired
     private BoardService boardService;
+    @Autowired
+    private CommentService commentService;
     @GetMapping("/boards/new")
     public String newBoard(){
         return "/boards/new";
@@ -29,8 +33,10 @@ public class BoardController {
     }
     @GetMapping("/boards/{id}")
     public String showBoard(@PathVariable Long id, Model model){
+        List<Comment> comments = commentService.showComment(id);
         Board board = boardService.showBoard(id);
         model.addAttribute("board",board);
+        model.addAttribute("Comments",comments);
         return "/boards/show";
     }
     @GetMapping("/boards")
